@@ -1,0 +1,193 @@
+:root{
+    --defmar: 5px;
+    --defpad: 5px;
+    --border: 2px solid black;
+    --color: rgba(239, 220, 212, 1);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* navbar */
+nav{
+    position: sticky;
+    top: 0px;
+    background-color: var(--color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.h3{
+    margin: 10px;
+    padding: 10px;
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+ul li{
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+}
+ul li:hover{
+    cursor: pointer;
+    color: rgb(114, 84, 70);
+}
+
+
+/* home */
+.container3{
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    height: 717px;
+    width: 650px;
+    background-color: rgb(221, 202, 194);
+}
+
+.container4{
+    margin: 0px;
+    padding: 30px;
+    background-color: whitesmoke;
+    height: 717px;
+    width: 1033px;
+    position: fixed;
+    left: 650px;
+    right: 0px;
+    display: inline-block;
+}
+.containerh1{
+    position: relative;
+    top: 140px;
+    left: 220px;
+    font-weight: bolder;
+    font-size: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 5s steps(80,end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.para{
+    position: relative;
+    top: 150px;
+    left: 220px;
+    bottom: 50px;
+    right: 100px;
+    height: 520px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.card{
+    padding: 33px;
+    border-radius: 30px ;
+    position: relative;
+    top: 100px;
+    /* left: 350px; */
+    bottom: 50px;
+    height: 520px;
+    width: 440px;
+    background-color: var(--color);
+    box-shadow: -3px 5px 10px 3px #888888;
+    animation: card 1.5s linear 1 alternate forwards;
+}
+@keyframes card{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(350px);
+    }
+}
+.circle{
+    position: relative;
+    left: 127px;
+    top: 55px;
+}
+.cardh2{
+    position: relative;
+    top: 95px;
+    text-align: center;
+}
+.solidline{
+    position: relative;
+    top: 116px;
+    left: 114px;
+}
+.cardh4{
+    position: relative;
+    top: 140px;
+    left: 4px;
+    text-align: center;
+    font: 300;
+    font-size: larger;
+}
+.rectangle{
+    position: relative;
+    bottom: 0px;
+    background-color: white;
+}
+
+/* About ME */
+.aboutme{
+    margin: 0px;
+    padding: 10px;
+    position: relative;
+    top: 197px;
+    height: 717px;
+    width: 1683px;
+    background-color: rgba(235, 231, 231, 1);
+}
+.parenth1{
+    font-size: 80px;
+    position: relative;
+    top: 30px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.child{
+    margin: 50px;
+    padding: 20px;  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 30px;
+    /* left: 300px; */
+}
+.child1{
+    margin: 20px;
+    padding: 50px;
+    height: 400px;
+    width: 350px;
+    border-radius: 15px;
+    position: relative;
+    /* left: 300px; */
+    background-color: rgba(218, 203, 203, 1);
+}
+.p-child{
+    font-size: 20px;
+}
+
+/* skills */
+.skills{
+    /* padding: 10px; */
+    position: relative;
+    top: 197px;
+}
