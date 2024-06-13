@@ -44,3 +44,49 @@ ul li:hover{
     cursor: pointer;
     color: rgb(114, 84, 70);
 }
+
+/* contact */
+.contact{
+    width: 1700px;
+    height: 717px;
+    position: relative;
+    /* top: 197px; */
+    color: white
+}
+
+.bg{
+    width: 1700px;
+    height: 717px;
+    z-index: 0;
+}
+
+.contacth1{
+    font-size: 100px;
+    position: absolute;
+    top: 160px;
+    left: 400px;
+}
+.icons{
+    position: relative;
+    bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconsimg{
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer{
+    padding: 7px;
+    color: black;
+    background-color: white;
+    position: relative;
+    bottom: 142px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
