@@ -1,0 +1,104 @@
+:root{
+    --defmar: 5px;
+    --defpad: 5px;
+    --border: 2px solid black;
+    --color: rgba(239, 220, 212, 1);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* navbar */
+nav{
+    position: sticky;
+    top: 0px;
+    width: 1683px;
+    z-index: 1;
+    background-color: var(--color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.h3{
+    margin: 10px;
+    padding: 10px;
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+ul li{
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+}
+ul li:hover{
+    cursor: pointer;
+    color: rgb(114, 84, 70);
+}
+
+/* skills */
+.skills{
+    /* padding: 10px; */
+    width: 1683px;
+    position: relative;
+    /* text-align: center; */
+    /* top: 197px; */
+}
+.skillsh1{
+    font-size: 80px;
+    text-align: center;
+    position: absolute;
+    top: 30px;
+    left: 750px;
+    text-decoration: underline;
+}
+.skillbg{
+    width: 1683px;
+    height: 717px;
+    z-index: 0;
+}
+
+.skillimg{
+    position: absolute;
+    top: 220px;
+    left: 500px;
+    /* z-index: 0.5; */
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px;
+}
+.animateY1{
+    animation: animationY1 1s ease-in-out 1;
+}
+.animateY2{
+    animation: animationY2 1s ease-in-out 1;
+}
+@keyframes animationY1
+{
+    from{
+        transform: translateY(-50px) ;
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes animationY2
+{
+    from{
+        transform: translateY(50px) ;
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
