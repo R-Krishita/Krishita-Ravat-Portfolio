@@ -1,0 +1,102 @@
+:root{
+    --defmar: 5px;
+    --defpad: 5px;
+    --border: 2px solid black;
+    --color: rgba(239, 220, 212, 1);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* navbar */
+nav{
+    position: sticky;
+    top: 0px;
+    width: 1683px;
+    z-index: 1;
+    background-color: var(--color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.h3{
+    margin: 10px;
+    padding: 10px;
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+ul li{
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+}
+ul li:hover{
+    cursor: pointer;
+    color: rgb(114, 84, 70);
+}
+
+/* About ME */
+.aboutme{
+    margin: 0px;
+    padding: 10px;
+    /* position: relative; */
+    /* top: 197px; */
+    height: 717px;
+    width: 1683px;
+    background-color: rgba(235, 231, 231, 1);
+}
+.parenth1{
+    font-size: 80px;
+    position: relative;
+    top: 30px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.child{
+    margin: 50px;
+    padding: 20px;  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 30px;
+    /* left: 300px; */
+}
+.child1{
+    margin: 20px;
+    padding: 50px;
+    height: 400px;
+    width: 350px;
+    border-radius: 15px;
+    position: relative;
+    /* left: 300px; */
+    background-color: rgba(218, 203, 203, 1);
+}
+.p-child{
+    font-size: 20px;
+}
+
+.ganimate{
+    animation: animategrad 1s cubic-bezier(0.62,-0.17, 0.36, 1.24) 1;
+}
+
+@keyframes animategrad
+{
+    from{
+        transform: translateX(100px) rotateY(-90deg);
+    }
+    to{
+        transform: translateX(0px) rotateY(0deg);
+    }
+}
