@@ -203,10 +203,8 @@ ul li:hover{
 
 /* skills */
 .skills{
-    /* padding: 10px; */
     width: 1700px;
     position: relative;
-    /* text-align: center; */
     top: 197px;
 }
 .skillsh1{
@@ -217,7 +215,7 @@ ul li:hover{
     left: 750px;
     text-decoration: underline;
 }
-.skillbg{
+.bg{
     width: 1700px;
     height: 717px;
     z-index: 0;
@@ -266,4 +264,112 @@ ul li:hover{
     to{
         transform: translateY(0px);
     }
+}
+
+
+/* resume */
+.resume{
+    width: 1700px;
+    height: 717px;
+    position: relative;
+    top: 197px;
+}
+
+.resumeh1{
+    font-size: 80px;
+    text-align: center;
+    position: absolute;
+    top: 30px;
+    left: 703px;
+    text-decoration: underline;
+}
+
+.cta {
+    position: relative;
+    /* top: 100px; */
+    left: 755px;
+    bottom: 470px;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+  
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+  
+.cta span {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+  
+.cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+  
+.cta:active {
+    transform: scale(0.95);
+}
+
+
+/* contact */
+.contact{
+    width: 1700px;
+    height: 717px;
+    position: relative;
+    /* top: 197px; */
+    color: white
+}
+
+.bg{
+    width: 1700px;
+    height: 717px;
+    z-index: 0;
+}
+
+.contacth1{
+    font-size: 100px;
+    position: absolute;
+    top: 160px;
+    left: 400px;
+}
+.icons{
+    position: relative;
+    bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconsimg{
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer{
+    padding: 7px;
+    color: black;
+    background-color: white;
+    position: relative;
+    bottom: 142px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }
