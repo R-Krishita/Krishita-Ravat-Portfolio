@@ -14,7 +14,7 @@
 nav{
     position: sticky;
     top: 0px;
-    width: 1683px;
+    width: 1700px;
     z-index: 1;
     background-color: var(--color);
     display: flex;
@@ -61,7 +61,7 @@ ul li:hover{
     padding: 30px;
     background-color: whitesmoke;
     height: 717px;
-    width: 1033px;
+    width: 1050px;
     position: absolute;
     left: 650px;
     right: 0px;
@@ -152,7 +152,7 @@ ul li:hover{
     position: relative;
     top: 197px;
     height: 717px;
-    width: 1683px;
+    width: 1700px;
     background-color: rgba(235, 231, 231, 1);
 }
 .parenth1{
@@ -204,7 +204,7 @@ ul li:hover{
 /* skills */
 .skills{
     /* padding: 10px; */
-    width: 1683px;
+    width: 1700px;
     position: relative;
     /* text-align: center; */
     top: 197px;
@@ -218,7 +218,7 @@ ul li:hover{
     text-decoration: underline;
 }
 .skillbg{
-    width: 1683px;
+    width: 1700px;
     height: 717px;
     z-index: 0;
 }
@@ -234,6 +234,15 @@ ul li:hover{
     grid-template-columns: 200px 200px 200px 200px;
     grid-template-rows: 200px 200px;
 }
+
+.imghover{
+    cursor: pointer;
+}
+
+.imghover:hover{
+    transform: scale(1.5);
+}
+
 .animateY1{
     animation: animationY1 1s ease-in-out 1;
 }
