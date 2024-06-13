@@ -14,7 +14,7 @@
 nav{
     position: sticky;
     top: 0px;
-    width: 1683px;
+    width: 1700px;
     z-index: 1;
     background-color: var(--color);
     display: flex;
@@ -52,7 +52,7 @@ ul li:hover{
     /* position: relative; */
     /* top: 197px; */
     height: 717px;
-    width: 1683px;
+    width: 1700px;
     background-color: rgba(235, 231, 231, 1);
 }
 .parenth1{
