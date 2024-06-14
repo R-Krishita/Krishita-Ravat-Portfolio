@@ -65,6 +65,7 @@ ul li:hover{
     position: absolute;
     top: 160px;
     left: 400px;
+    
 }
 .icons{
     position: relative;
@@ -74,10 +75,14 @@ ul li:hover{
     align-items: center;
 }
 .iconsimg{
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
+    /* transform: scale3D(1.5); */
 }
 
+.iconsimg:hover{
+    background-color: rgb(214, 181, 168);
+}
 .footer{
     padding: 7px;
     color: black;
