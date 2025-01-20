@@ -1,37 +1,43 @@
 
 /* contact */
-.contact{
-    width: 1700px;
-    height: 717px;
+
+.contact {
+    width: 90vw;
+    height: 80vh;
     position: relative;
-    /* top: 197px; */
-    color: white
+    color: white;
+    margin: 0 auto; /* Center the contact section */
 }
 
-.bg{
-    width: 1700px;
-    height: 717px;
+.bg {
+    width: 90vw;
+    height: 60vh;
     z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.contacth1{
-    font-size: 100px;
-    position: absolute;
-    top: 160px;
-    left: 400px;
-    
-}
-.icons{
+.contacth1 {
+    font-size: 8vw; /* Responsive font size */
     position: relative;
-    bottom: 200px;
+    text-align: center;
+    margin-top: 5vh; /* Adjust top margin */
+}
+
+.icons {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5vh; /* Adjust top margin */
 }
-.iconsimg{
-    margin: 20px;
-    padding: 10px;
-    /* transform: scale3D(1.5); */
+
+.iconsimg {
+    margin: 2vw;
+    padding: 1vw;
+    width: 5vw; /* Adjust icon size */
+    height: 5vh;
 }
 
 .iconsimg:hover{
@@ -42,7 +48,7 @@
     color: black;
     background-color: white;
     position: relative;
-    bottom: 142px;
+    bottom: 10vh;
     z-index: 1;
     display: flex;
     justify-content: center;
