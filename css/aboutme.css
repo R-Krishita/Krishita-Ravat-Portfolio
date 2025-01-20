@@ -52,33 +52,33 @@ ul li:hover{
     padding: 10px;
     /* position: relative; */
     /* top: 197px; */
-    height: 717px;
-    width: 1700px;
+    height: 88vh;
+    width: 100vw;
     background-color: rgba(235, 231, 231, 1);
 }
 .parenth1{
-    font-size: 80px;
     position: relative;
-    top: 30px;
+    font-size: 80px;
+    right: 2vw;
     text-align: center;
     text-decoration: underline;
 }
 
 .child{
-    margin: 50px;
-    padding: 20px;  
+    margin: 10px;
+    padding: 10px;  
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: relative;
-    top: 30px;
-    /* left: 300px; */
+    /* top: 30px; */
+    right: 2vw;
 }
 .child1{
     margin: 20px;
     padding: 50px;
-    height: 400px;
-    width: 350px;
+    height: 55vh;
+    width: 20vw;
     border-radius: 15px;
     position: relative;
     /* left: 300px; */
