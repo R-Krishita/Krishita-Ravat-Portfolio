@@ -2,7 +2,7 @@
 /* skills */
 .skills{
     /* padding: 10px; */
-    width: 1700px;
+    width: 100vw;
     position: relative;
     /* text-align: center; */
     /* top: 197px; */
@@ -11,20 +11,20 @@
     font-size: 80px;
     text-align: center;
     position: absolute;
-    top: 30px;
-    left: 750px;
+    top: 2vh;
+    left: 45vw;
     text-decoration: underline;
 }
 .skillbg{
-    width: 1683px;
-    height: 717px;
+    width: 100vw;
+    height: 88vh;
     z-index: 0;
 }
 
 .skillimg{
     position: absolute;
-    top: 220px;
-    left: 500px;
+    top: 26vh;
+    left: 30vw;
     /* z-index: 0.5; */
     margin: 10px;
     padding: 10px;
