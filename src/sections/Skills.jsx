@@ -7,7 +7,7 @@ const Skills = () => {
   const skills = [
     { name: "C", icon: <SiC size={50} className="text-blue-500" /> },
     { name: "Python", icon: <FaPython size={50} className="text-yellow-400" /> },
-    { name: "Java", icon: <FaJava size={50} className="text-red-500" /> },
+    // { name: "Java", icon: <FaJava size={50} className="text-red-500" /> },
     { name: "PHP", icon: <FaPhp size={50} className="text-indigo-400" /> },
     { name: "HTML", icon: <FaHtml5 size={50} className="text-orange-500" /> },
     { name: "CSS", icon: <FaCss3Alt size={50} className="text-blue-400" /> },

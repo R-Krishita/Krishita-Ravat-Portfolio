@@ -2,14 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+body {
+  @apply bg-slate-900 text-white;
 }
 
-body {
-  background-color: #0f172a;
-  /* Slate 900 */
-  color: #e2e8f0;
-  /* Slate 200 */
-  font-family: 'Inter', sans-serif;
+/* Timeline Custom Styles */
+@layer components {
+  .timeline-container {
+    @apply w-full md:w-1/2 px-6;
+  }
+
+  .timeline-container-left {
+    @apply md:mr-auto md:pr-12;
+  }
+
+  .timeline-container-right {
+    @apply md:ml-auto md:pl-12;
+  }
+
+  .timeline-pointer {
+    @apply absolute w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900 z-20;
+    top: 2rem;
+  }
+
+  .timeline-pointer-left {
+    @apply left-0 md:left-auto md:right-0 md:-mr-2;
+  }
+
+  .timeline-pointer-right {
+    @apply left-0 -ml-2;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .timeline-container {
+    @apply w-full pl-12;
+  }
+
+  .timeline-container-left,
+  .timeline-container-right {
+    @apply mr-0 ml-0;
+  }
+
+  .timeline-pointer {
+    @apply left-4;
+  }
 }
