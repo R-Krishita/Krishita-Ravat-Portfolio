@@ -11,7 +11,7 @@ const About = () => {
       description: (
         <div className="flex flex-col gap-4 text-left mt-2">
             <div className="relative pl-4 border-l-2 border-cyan-500/30">
-                <h4 className="text-white font-bold text-lg">B.E. in Computer Engineering</h4>
+                <h4 className="text-white font-bold text-lg">B.E. in Computer Engineering (Cybersecurity Honors)</h4>
                 <p className="text-cyan-400 font-medium">University of Mumbai</p>
                 <div className="flex justify-between items-center mt-1">
                     <span className="text-xs text-gray-500">2022 - 2026 (Expected Graduation)</span>
