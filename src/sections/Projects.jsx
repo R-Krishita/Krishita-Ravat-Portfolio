@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Projects = () => {
+  console.log("Projects component rendering...");
   const projects = [
     {
       title: "Solar Flare Forecasting",
@@ -10,8 +11,8 @@ const Projects = () => {
       tech: ["Python", "TensorFlow", "PyTorch"],
       description: "Developed a multi-modal deep learning model using NASA SDO imagery and SHARP magnetic-field parameters to predict solar flare classes and intensity. Designed a hybrid CNN-GRU architecture with temporal attention, and conducted detailed evaluation using ROC curves, AUC, and confusion matrices to diagnose class-imbalance limitations.",
       links: {
-        github: "#", // Placeholder
-        demo: "#"    // Placeholder
+        github: "https://github.com/R-Krishita", // Placeholder
+        // demo: "#"    // Placeholder
       }
     },
     {
@@ -20,8 +21,8 @@ const Projects = () => {
       tech: ["MERN Stack", "Python"],
       description: "Built an AI-driven agricultural advisory system with multi-service architecture that scores crop suitability, predicts yield and profit, and generates personalized farm recommendations using weather, soil, and market data. Implemented the Top-3 crop recommendation engine, market insights module, and an actionable advisory layer to help farmers improve crop decisions and profitability.",
       links: {
-        github: "#", // Placeholder
-        demo: "#"    // Placeholder
+        github: "https://github.com/R-Krishita/VYAAS-MOBILE-APP", // Placeholder
+        demo: "https://vyaas-mobile-app.vercel.app/"    // Placeholder
       }
     },
     {
@@ -30,8 +31,8 @@ const Projects = () => {
       tech: ["HTML", "CSS", "PHP"],
       description: "Engineered a robust online doctor appointment management system with distinct administrative, doctor, and patient modules. Implemented efficient scheduling, data validation, and user access controls to enhance overall system reliability and user experience.",
       links: {
-        github: "#", // Placeholder
-        demo: "#"    // Placeholder
+        github: "https://github.com/R-Krishita/HappyLife", // Placeholder
+        demo: "https://happy-life-eight.vercel.app/"    // Placeholder
       }
     }
   ];
@@ -76,13 +77,29 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <div className="flex gap-4">
-                    <a href={project.links.github} className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm">
-                      <FaGithub /> Code
-                    </a>
-                    <a href={project.links.demo} className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm">
-                      <FaExternalLinkAlt /> Live Demo
-                    </a>
+                  <div className="flex gap-4 relative z-50">
+                    {project.links.github && (
+                      <a 
+                        href={project.links.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="project-link-github text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm cursor-pointer relative z-50"
+                      >
+                        <FaGithub /> Code
+                      </a>
+                    )}
+                    {project.links.demo && (
+                      <a 
+                        href={project.links.demo} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm cursor-pointer relative z-50"
+                      >
+                        <FaExternalLinkAlt /> Live Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
