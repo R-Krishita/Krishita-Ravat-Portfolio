@@ -196,7 +196,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 2.2 }}
             className="text-gray-300 max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed"
           >
-            Committed to continuous learning and knowledge sharing, with a strong focus on excellence and organizational skills. Growth Mindset | Proactive Learner.
+            Committed to continuous learning and knowledge sharing, with a strong focus on excellence and organizational skills. <br />Growth Mindset | Proactive Learner.
           </motion.p>
           
           <motion.div 

@@ -8,19 +8,26 @@ const About = () => {
       id: 1,
       icon: <FaGraduationCap size={30} className="text-cyan-400" />,
       title: "Education",
-      description: "Bachelor of Engineering in Computer Engineering at University of Mumbai (Avg CGPA: 8.47). D.A.V. International School (AISSCE: 87.2%)."
-    },
-    {
-      id: 2,
-      icon: <FaBriefcase size={30} className="text-purple-400" />,
-      title: "Experience",
-      description: "General Secretary at SAKEC AICTE IDEALab. Website Team Co-Head at Computer Society of India - SAKEC."
-    },
-    {
-      id: 3,
-      icon: <FaUsers size={30} className="text-pink-400" />,
-      title: "Leadership",
-      description: "Driving innovation and operational execution across multidisciplinary teams."
+      description: (
+        <div className="flex flex-col gap-4 text-left mt-2">
+            <div className="relative pl-4 border-l-2 border-cyan-500/30">
+                <h4 className="text-white font-bold text-lg">B.E. in Computer Engineering</h4>
+                <p className="text-cyan-400 font-medium">University of Mumbai</p>
+                <div className="flex justify-between items-center mt-1">
+                    <span className="text-xs text-gray-500">2022 - 2026 (Expected Graduation)</span>
+                    <span className="text-sm font-semibold text-white bg-slate-700 px-2 py-0.5 rounded">CGPA: 8.47</span>
+                </div>
+            </div>
+            <div className="relative pl-4 border-l-2 border-purple-500/30">
+                <h4 className="text-white font-bold text-lg">Higher Secondary AISSCE (12th)</h4>
+                <p className="text-purple-400 font-medium">D.A.V. International School</p>
+                <div className="flex justify-between items-center mt-1">
+                    <span className="text-xs text-gray-500">2021 - 2022</span>
+                    <span className="text-sm font-semibold text-white bg-slate-700 px-2 py-0.5 rounded">87.2%</span>
+                </div>
+            </div>
+        </div>
+      )
     }
   ];
 
@@ -35,10 +42,22 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-cyan-500 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-cyan-500 mx-auto rounded-full mb-8"></div>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed mb-12"
+          >
+            As an AI & Full-Stack Engineer, I specialize in designing end-to-end data-driven solutions that transform complex information into real, usable outcomes. My work spans building predictive models, crafting insightful analytics, and developing full-stack applications that bring these models to life.<br />
+
+            I blend machine learning with modern web engineering to create scalable, reliable, and user-focused systems. Whether it’s training ML models, architecting APIs, or engineering seamless frontends, I love turning ideas into production-ready digital experiences.
+          </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
           {items.map((item, index) => (
             <motion.div
               key={item.id}
@@ -53,9 +72,9 @@ const About = () => {
                 {item.icon}
               </div>
               <h3 className="text-xl font-semibold text-white text-center mb-4">{item.title}</h3>
-              <p className="text-gray-400 text-center leading-relaxed">
+              <div className="text-gray-400 text-center leading-relaxed">
                 {item.description}
-              </p>
+              </div>
             </motion.div>
           ))}
         </div>
