@@ -8,19 +8,19 @@ const About = () => {
       id: 1,
       icon: <FaGraduationCap size={30} className="text-cyan-400" />,
       title: "Education",
-      description: "Currently enrolled as an undergraduate student pursuing BE in Computer Engineering at Shah and Anchor Kutchhi Engineering College."
+      description: "Bachelor of Engineering in Computer Engineering at University of Mumbai (Avg CGPA: 8.47). D.A.V. International School (AISSCE: 87.2%)."
     },
     {
       id: 2,
       icon: <FaBriefcase size={30} className="text-purple-400" />,
       title: "Experience",
-      description: "Internship Trainee Coordinator at VocalsLocal. Web Development Intern at CodSoft."
+      description: "General Secretary at SAKEC AICTE IDEALab. Website Team Co-Head at Computer Society of India - SAKEC."
     },
     {
       id: 3,
       icon: <FaUsers size={30} className="text-pink-400" />,
       title: "Leadership",
-      description: "Website Team Co-Head at CSI-SAKEC."
+      description: "Driving innovation and operational execution across multidisciplinary teams."
     }
   ];
 
