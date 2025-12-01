@@ -57,6 +57,14 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              <a
+                href="/Krishita_Haresh_Ravat_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-cyan-400 text-slate-900 hover:bg-cyan-300 px-4 py-2 rounded-md text-sm font-bold transition-colors duration-300 ml-4 cursor-pointer"
+              >
+                Resume
+              </a>
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
@@ -88,6 +96,14 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 hover:text-cyan-300 block px-3 py-2 rounded-md text-base font-bold cursor-pointer"
+            >
+              Resume
+            </a>
           </div>
         </motion.div>
       )}
