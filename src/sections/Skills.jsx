@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPython, FaJava, FaPhp, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa';
-import { SiMysql, SiC } from 'react-icons/si';
+import { FaPython, FaJava, FaPhp, FaHtml5, FaCss3Alt, FaGitAlt, FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
+import { SiMysql, SiC, SiExpress, SiMongodb } from 'react-icons/si';
 
 const Skills = () => {
   const skills = [
@@ -11,8 +11,13 @@ const Skills = () => {
     { name: "PHP", icon: <FaPhp size={50} className="text-indigo-400" /> },
     { name: "HTML", icon: <FaHtml5 size={50} className="text-orange-500" /> },
     { name: "CSS", icon: <FaCss3Alt size={50} className="text-blue-400" /> },
-    { name: "Git", icon: <FaGitAlt size={50} className="text-red-600" /> },
+    { name: "JavaScript", icon: <FaJs size={50} className="text-yellow-300" /> },
+    { name: "ReactJS", icon: <FaReact size={50} className="text-cyan-400" /> },
+    { name: "Node.js", icon: <FaNodeJs size={50} className="text-green-500" /> },
+    { name: "Express.js", icon: <SiExpress size={50} className="text-gray-400" /> },
+    { name: "MongoDB", icon: <SiMongodb size={50} className="text-green-500" /> },
     { name: "MySQL", icon: <SiMysql size={50} className="text-blue-600" /> },
+    { name: "Git", icon: <FaGitAlt size={50} className="text-red-600" /> },
   ];
 
   return (
