@@ -188,7 +188,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 2.0 }}
             className="text-xl md:text-2xl text-gray-400 mb-6"
           >
-            Web Development Enthusiast
+            Mern Stack Developer | Applied ML Engineer
           </motion.h3>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -227,7 +227,7 @@ const Hero = () => {
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <div className="absolute inset-0 bg-cyan-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
             <div className="relative w-full h-full rounded-full border-4 border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center">
-               <img src="/assets/portfolio-modified.png" alt="Krishita" className="w-full h-full object-cover" onError={(e) => {e.target.onerror=null; e.target.src='https://via.placeholder.com/300?text=KR';}} />
+               <img src="/assets/profile.jpg" alt="Krishita" className="w-full h-full object-cover" onError={(e) => {e.target.onerror=null; e.target.src='https://via.placeholder.com/300?text=KR';}} />
             </div>
           </div>
         </motion.div>
