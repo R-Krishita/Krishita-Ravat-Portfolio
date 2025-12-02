@@ -36,36 +36,41 @@ const Positions = () => {
           <div className="w-20 h-1 bg-cyan-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="relative container mx-auto px-6 flex flex-col space-y-8">
+          <div className="absolute z-0 w-1 h-full bg-slate-700 shadow-md inset-0 left-17 md:mx-auto md:right-0 md:left-0"></div>
           {positions.map((pos, index) => (
-            <motion.div
+            <motion.div 
               key={pos.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="bg-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 shadow-lg"
+              className="relative z-10"
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-slate-800 rounded-lg border border-slate-700">
-                  {pos.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">{pos.role}</h3>
-                  <p className="text-cyan-400">{pos.organization}</p>
-                </div>
-              </div>
-              
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-slate-800 text-gray-400 text-xs rounded-full border border-slate-700">
-                  {pos.duration}
-                </span>
-              </div>
+              <div className={index % 2 === 0 ? "timeline-container timeline-container-left" : "timeline-container timeline-container-right"}>
+                <div className={index % 2 === 0 ? "timeline-pointer timeline-pointer-left" : "timeline-pointer timeline-pointer-right"} aria-hidden="true"></div>
+                <div className="bg-slate-900 p-6 rounded-xl border border-slate-700 shadow-xl hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-slate-800 rounded-lg border border-slate-700 shrink-0">
+                      {pos.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">{pos.role}</h3>
+                      <p className="text-cyan-400 font-medium">{pos.organization}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <span className="inline-block px-3 py-1 bg-slate-800 text-gray-400 text-xs rounded-full border border-slate-700">
+                      {pos.duration}
+                    </span>
+                  </div>
 
-              <p className="text-gray-400 leading-relaxed">
-                {pos.description}
-              </p>
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    {pos.description}
+                  </p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
