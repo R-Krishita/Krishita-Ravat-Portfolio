@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaFolderOpen } from 'react-icons/fa';
 
 const Projects = () => {
   console.log("Projects component rendering...");
   const projects = [
     {
       title: "Solar Flare Forecasting",
+      status: "Ongoing",
       category: "Machine Learning / Deep Learning",
       tech: ["Python", "TensorFlow", "PyTorch"],
       description: "Developed a multi-modal deep learning model using NASA SDO imagery and SHARP magnetic-field parameters to predict solar flare classes and intensity. Designed a hybrid CNN-GRU architecture with temporal attention, and conducted detailed evaluation using ROC curves, AUC, and confusion matrices to diagnose class-imbalance limitations.",
@@ -16,7 +17,8 @@ const Projects = () => {
       }
     },
     {
-      title: "Vyaas – AI-Powered Crop Yield Prediction",
+      title: "Vyaas – AI-Powered Crop Advisory System",
+      status: "Ongoing",
       category: "Full-Stack / Machine Learning",
       tech: ["MERN Stack", "Python"],
       description: "Built an AI-driven agricultural advisory system with multi-service architecture that scores crop suitability, predicts yield and profit, and generates personalized farm recommendations using weather, soil, and market data. Implemented the Top-3 crop recommendation engine, market insights module, and an actionable advisory layer to help farmers improve crop decisions and profitability.",
@@ -27,12 +29,24 @@ const Projects = () => {
     },
     {
       title: "HappyLife",
+      status: "Completed",
       category: "Web Development",
       tech: ["HTML", "CSS", "PHP"],
       description: "Engineered a robust online doctor appointment management system with distinct administrative, doctor, and patient modules. Implemented efficient scheduling, data validation, and user access controls to enhance overall system reliability and user experience.",
       links: {
         github: "https://github.com/R-Krishita/HappyLife", // Placeholder
         demo: "https://happy-life-eight.vercel.app/"    // Placeholder
+      }
+    },
+    {
+      title: "Workout Routine Generator",
+      status: "Completed",
+      category: "Web Development",
+      tech: ["MERN Stack"],
+      description: "Architected and deployed a personalized workout planning application using the MERN stack. Designed a responsive front end integrated with a MongoDB-backed API for dynamic routine generation. Strengthened proficiency in database structuring, API optimization, and seamless front–back-end communication",
+      links: {
+        github: "https://github.com/R-Krishita/workout-routine-genrator", // Placeholder
+        demo: "https://workout-routine-genrator.vercel.app/"    // Placeholder
       }
     }
   ];
@@ -51,42 +65,35 @@ const Projects = () => {
           <div className="w-20 h-1 bg-cyan-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="relative container mx-auto px-6 flex flex-col space-y-8">
-          <div className="absolute z-0 w-1 h-full bg-slate-700 shadow-md inset-0 left-17 md:mx-auto md:right-0 md:left-0"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div 
               key={project.title}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative z-10"
+              whileHover={{ y: -10 }}
+              className="group relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 shadow-xl flex flex-col h-full"
             >
-              <div className={index % 2 === 0 ? "timeline-container timeline-container-left" : "timeline-container timeline-container-right"}>
-                <div className={index % 2 === 0 ? "timeline-pointer timeline-pointer-left" : "timeline-pointer timeline-pointer-right"} aria-hidden="true"></div>
-                <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-xl hover:border-cyan-500/50 transition-all duration-300">
-                  <span className="font-bold text-cyan-400 text-sm tracking-wide">{project.category}</span>
-                  <h3 className="text-2xl font-bold text-white mt-1 mb-2">{project.title}</h3>
-                  <p className="text-gray-400 mb-4 text-sm leading-relaxed">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((t) => (
-                      <span key={t} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded-md border border-slate-600">
-                        {t}
-                      </span>
-                    ))}
+              {/* Top Gradient Bar */}
+              <div className="h-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+              
+              <div className="p-8 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-6">
+                  <div className="p-3 bg-slate-900/50 rounded-xl border border-slate-700 group-hover:border-cyan-500/30 transition-colors">
+                    <FaFolderOpen className="text-2xl text-cyan-400" />
                   </div>
-
-                  <div className="flex gap-4 relative z-50">
+                  <div className="flex gap-3">
                     {project.links.github && (
                       <a 
                         href={project.links.github} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="project-link-github text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm cursor-pointer relative z-50"
+                        className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-slate-700 rounded-lg"
+                        title="View Code"
                       >
-                        <FaGithub /> Code
+                        <FaGithub size={20} />
                       </a>
                     )}
                     {project.links.demo && (
@@ -94,13 +101,37 @@ const Projects = () => {
                         href={project.links.demo} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm cursor-pointer relative z-50"
+                        className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-slate-700 rounded-lg"
+                        title="Live Demo"
                       >
-                        <FaExternalLinkAlt /> Live Demo
+                        <FaExternalLinkAlt size={18} />
                       </a>
                     )}
                   </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  {project.title}
+                </h3>
+                
+                <div className="flex items-center gap-2 mb-4 text-sm">
+                  <span className="text-cyan-400 font-medium">{project.category}</span>
+                  <span className="text-slate-600">•</span>
+                  <span className={project.status === "Ongoing" ? "text-yellow-400" : "text-green-400"}>
+                    {project.status}
+                  </span>
+                </div>
+
+                <p className="text-gray-400 mb-6 leading-relaxed flex-grow">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-auto pt-6 border-t border-slate-700/50">
+                  {project.tech.map((t) => (
+                    <span key={t} className="px-3 py-1 bg-slate-900/50 text-cyan-100/80 text-xs font-medium rounded-full border border-slate-700/50">
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
             </motion.div>
