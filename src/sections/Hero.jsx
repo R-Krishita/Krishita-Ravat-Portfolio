@@ -188,7 +188,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 2.0 }}
             className="text-xl md:text-2xl text-gray-400 mb-6"
           >
-            Mern Stack Developer | Applied ML Engineer
+            Data Scientist Intern | Applied Machine Learning Engineer | Mern Stack Developer 
           </motion.h3>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
